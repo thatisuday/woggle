@@ -1,6 +1,6 @@
 {
     "name": "woggle",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simple command line tool to generate pug, sass and gulp based frontend projects.",
     "main": "index.js",
     "scripts": {
