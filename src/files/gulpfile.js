@@ -157,6 +157,13 @@ gulp.task('compile:js', function (cb) {
     runSequence('compile:js:all', 'compile:js:combine', cb);
 });
 
+// copy assets file
+gulp.task('copy:assets', function () {
+    gulp
+        .src(['./src/assets/**/*'])
+        .pipe(gulp.dest('./build/assets'));
+});
+
 // browserSync task to launch preview server
 gulp.task('browserSync', function () {
     return browserSync.init({
@@ -174,7 +181,7 @@ gulp.task('reloadBrowserSync', function () {
 /*********************************************/
 
 // build
-gulp.task('build', ['compile:pug', 'compile:scss', 'compile:ts', 'compile:html', 'compile:css', 'compile:js']);
+gulp.task('build', ['compile:pug', 'compile:scss', 'compile:ts', 'compile:html', 'compile:css', 'compile:js', 'copy:assets']);
 
 // watch
 gulp.task('watch', ['build', 'browserSync'], function () {
