@@ -27,6 +27,8 @@ npm run build
 npm run build:watch
 ```
 
+This will put all compiled files inside `build` directory.
+
 ### Help
 ```
 $ woggle --help
