@@ -15,7 +15,7 @@ module.exports = exports = function (projectName, answers) {
     cp.sync(path.resolve(__dirname, '../files/gulpfile.js'), projectName + '/gulpfile.js');
 
     // copy .gitignore
-    cp.sync(path.resolve(__dirname, '../files/.gitignore'), projectName + '/.gitignore');
+    cp.sync(path.resolve(__dirname, '../files/gitignore.txt'), projectName + '/.gitignore');
 
     // copy tsconfig.json
     cp.sync(path.resolve(__dirname, '../files/tsconfig.json'), projectName + '/tsconfig.json');
