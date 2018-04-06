@@ -178,5 +178,5 @@ gulp.task('build', ['compile:pug', 'compile:scss', 'compile:ts', 'compile:html',
 
 // watch
 gulp.task('watch', ['build', 'browserSync'], function () {
-    gulp.watch(['./src/**/*'], ['build', 'reloadBrowserSync']]);
+    gulp.watch(['./src/**/*'], ['build', 'reloadBrowserSync']);
 });
