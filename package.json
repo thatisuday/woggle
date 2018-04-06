@@ -2,10 +2,6 @@
     "name": "woggle",
     "version": "1.0.1",
     "description": "A simple command line tool to generate pug, sass and gulp based frontend projects.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "preferGlobal": true,
     "bin": "./bin/index.js",
     "repository": {
@@ -35,25 +31,13 @@
     },
     "homepage": "https://github.com/thatisuday/woggle#readme",
     "dependencies": {
-        "cli-spinner": "^0.2.8",
         "colors": "^1.2.1",
         "commander": "^2.15.1",
         "cp": "^0.2.0",
-        "gulp": "^3.9.1",
-        "gulp-clean-css": "^3.9.3",
-        "gulp-concat": "^2.6.1",
-        "gulp-pug": "^3.3.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^4.0.0",
-        "gulp-sourcemaps": "^2.6.4",
-        "gulp-typescript": "^4.0.2",
-        "gulp-uglify": "^3.0.0",
         "inquirer": "^5.2.0",
         "mkdirp": "^0.5.1",
         "node-cmd": "^3.0.0",
         "path-exists": "^3.0.0",
-        "replace-in-file": "^3.4.0",
-        "run-sequence": "^2.2.1",
-        "typescript": "^2.8.1"
+        "replace-in-file": "^3.4.0"
     }
 }

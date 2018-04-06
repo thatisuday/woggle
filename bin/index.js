@@ -19,11 +19,11 @@ program
         // check if project folder already exists
         if(pathExists.sync(path.resolve(process.cwd(), projectName))){
             console.log(colors.yellow.bold(`Error! Directory ${projectName} already exist.`));
-            //process.exit(1);
+            process.exit(1);
         }
         else{
+            generate(projectName);
         }
-        generate(projectName);
     });
 
 

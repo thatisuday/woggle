@@ -88,6 +88,14 @@ gulp.task('compile:ts', function (cb) {
     runSequence('compile:ts:all', 'compile:ts:combine', cb);
 });
 
+// compile html
+gulp.task('compile:html', function () {
+    return gulp.src('./src/html/**/*.html')
+        .pipe(rename({ dirname: 'html' }))
+        .pipe(gulp.dest('./build'))
+        ;
+});
+
 // compile css
 gulp.task('compile:css:all', function () {
     return gulp.src('./src/css/**/*.css')
@@ -152,7 +160,7 @@ gulp.task('compile:js', function (cb) {
 /*********************************************/
 
 // build
-gulp.task('build', ['compile:pug', 'compile:scss', 'compile:ts', 'compile:css', 'compile:js']);
+gulp.task('build', ['compile:pug', 'compile:scss', 'compile:ts', 'compile:html', 'compile:css', 'compile:js']);
 
 // watch
 gulp.task('watch', ['build'], function () {
