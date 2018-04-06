@@ -51,5 +51,5 @@ module.exports = exports = function (projectName, answers) {
     };
 
     // copy logo.jpg asset file
-    cp.sync(path.resolve(__dirname, '../files/logo.jpg'), projectName + '/src/assets/logo.jpg');
+    cp.sync(path.resolve(__dirname, '../files/sample/logo.jpg'), projectName + '/src/assets/logo.jpg');
 };
