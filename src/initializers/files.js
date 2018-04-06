@@ -49,4 +49,7 @@ module.exports = exports = function (projectName, answers) {
         default:
             cp.sync(path.resolve(__dirname, '../files/sample/index.html'), projectName + '/src/html/index.html');
     };
+
+    // copy logo.jpg asset file
+    cp.sync(path.resolve(__dirname, '../files/logo.jpg'), projectName + '/src/assets/logo.jpg');
 };

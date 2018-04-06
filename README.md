@@ -1,5 +1,5 @@
 # woggle
-A simple command line tool to generate **pug**, **sass** and **gulp** based frontend project.
+A simple command line tool to generate **pug**, **sass**, **gulp** and **browser-sync** based front-end projects.
 
 [![npm](https://img.shields.io/npm/dt/woggle.svg?style=flat-square)](https://www.npmjs.com/package/woggle)
 [![npm](https://img.shields.io/npm/v/woggle.svg?style=flat-square)](https://www.npmjs.com/package/woggle)
@@ -18,7 +18,7 @@ woggle generate my-project
 woggle g my-project
 ```
 
-Wobble will generate a complete folder structure based on your choices. It will also install all npm dependencies and initialize gulpfile.js task file.
+**wobble** will generate a complete folder structure based on your choices. It will also install all npm dependencies and initialize gulpfile.js task file.
 
 You can the use following commands to compile your project.
 

@@ -7,6 +7,7 @@ const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const runSequence = require('run-sequence');
+const browserSync = require('browser-sync').create();
 
 const ts = require('gulp-typescript').createProject('tsconfig.json');
 
@@ -156,6 +157,19 @@ gulp.task('compile:js', function (cb) {
     runSequence('compile:js:all', 'compile:js:combine', cb);
 });
 
+// browserSync task to launch preview server
+gulp.task('browserSync', function () {
+    return browserSync.init({
+        reloadDelay: 2000, // reload after 2s, compilation is finished (hopefully)
+        server: { baseDir: './build' }
+    });
+});
+
+// task to reload browserSync
+gulp.task('reloadBrowserSync', function () {
+    return browserSync.reload();
+});
+
 
 /*********************************************/
 
@@ -163,6 +177,6 @@ gulp.task('compile:js', function (cb) {
 gulp.task('build', ['compile:pug', 'compile:scss', 'compile:ts', 'compile:html', 'compile:css', 'compile:js']);
 
 // watch
-gulp.task('watch', ['build'], function () {
-    gulp.watch(['./src/**/*'], ['build']);
+gulp.task('watch', ['build', 'browserSync'], function () {
+    gulp.watch(['./src/**/*'], ['build', 'reloadBrowserSync']]);
 });
